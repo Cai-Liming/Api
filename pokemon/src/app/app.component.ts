@@ -25,4 +25,10 @@ export class AppComponent {
     this.data = data.results
   }
 
+  vai(url:string){
+    const parts =url.split('/');
+    console.log(parts)
+    return parts.at(-2)
+  }
+
 }

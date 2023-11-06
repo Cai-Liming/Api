@@ -1,8 +1,11 @@
 <div *ngFor="let x of data">
   <ul>
     <li>
-      <a routerLink="pagina-pokemon/{{x.url}}">{{x.name}}</a>
+      <a routerLink="pagina-pokemon/{{vai(x.url)}}">{{x.name}}</a>
     </li>
   </ul>
 
 </div>
+
+
+<router-outlet></router-outlet>
