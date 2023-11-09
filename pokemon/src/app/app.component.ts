@@ -12,7 +12,7 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent {
   title = 'pokemon';
   obs !: Observable<Root>
-  data : Result[] = []
+  data !: Result[] 
 
   constructor (private http : HttpClient){
     this.obs = this.http.get<Root>('https://pokeapi.co/api/v2/type')
@@ -27,7 +27,7 @@ export class AppComponent {
 
   vai(url:string){
     const parts =url.split('/');
-    console.log(parts)
+    
     return parts.at(-2)
   }
 

@@ -14,13 +14,13 @@ export class PaginaPokemonComponent {
 
   obs !: Observable<Root1>
   id !: string | null
-  data: Pokemon[] = []
+  data !: Pokemon[]
   constructor(private http: HttpClient, private activatedRoute: ActivatedRoute) {
 
 
     this.activatedRoute.paramMap.subscribe(
       params => {
-        console.log(params.get('path'));
+        
 
         this.Cerca(params.get('path'))
       }
@@ -39,11 +39,7 @@ export class PaginaPokemonComponent {
 
   }
 
-  vai(url: string) {
-    const parts = url.split('/');
-    console.log(parts)
-    return parts.at(-2)
-  }
+  
 
 
 }
